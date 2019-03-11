@@ -13,3 +13,27 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
+
+
+mix.styles([
+
+    'resources/css/agency.css',
+    'resources/css/bootstrap.css',
+    'resources/css/all.min.css',
+    'resources/css/jquery-ui.min.css',
+    'resources/css/jquery.css'
+
+],'public/css/libs.css');
+
+mix.scripts([
+
+    'resources/js/bootstrap.js',
+    'resources/js/easing.min.js',
+    'resources/js/bootstrap.bundle.min.js',
+    'resources/js/agency.js',
+    'resources/js/contact_me.js',
+    'resources/js/jqBootstrapValidation.js',
+    'resources/js/jquery-3.3.1.min.js',
+    'resources/js/jquery-ui.min.js'
+
+],'public/js/libs.js');
