@@ -10655,12 +10655,7 @@ a.text-dark:focus {
   }
 }
 
-.navbar-laravel {
-  background-color: green;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
-body {
-  background-color: #000000;
+#admin-page {
+  color: #000;
 }
 
