@@ -5,6 +5,8 @@
 
     <h1>Create User</h1>
 
+    @include('includes.form_error')
+
     {!! Form::open(['method'=>'POST','action'=>'AdminUserController@store','files'=>'true']) !!}
 
     <div class="row">
@@ -26,6 +28,12 @@
         <div class="form-group col-md-4">
             {!! Form::label('mobile_number','Mobile Number') !!}
             {!! Form::number('mobile_number',null,['class'=>'form-control']) !!}
+
+            @if ($errors->has('mobile_number'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('mobile_number') }}</strong>
+                </span>
+            @endif
         </div>
 
         <div class="form-group col-md-4">
@@ -55,6 +63,8 @@
     </div>
 
     {!! Form::close() !!}
+
+
 
 
 @stop
