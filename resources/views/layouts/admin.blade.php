@@ -24,7 +24,7 @@
 
 
 <body >
-    <nav class="navbar navbar-default navbar-expand-lg text-center fixed-top" id="mainNav">
+    <nav class="navbar navbar-default navbar-dark navbar-expand-lg text-center fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">Home</a>
             {{--<a class="nav-link  js-scroll-trigger" href="bookings/login.php">Book Now</a>--}}

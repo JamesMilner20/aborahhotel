@@ -9,13 +9,13 @@
 
     <div class="row">
 
-        <div class="col-sm-3">
+        <div class="col-sm-4">
 
             <img height="300" src="{{$user->photo?$user->photo->file:'No ID uploaded'}}" alt="" class="card-img">
 
         </div>
 
-        <div class="col-sm-9">
+        <div class="col-sm-8">
 
             {!! Form::model($user,['method'=>'PATCH','action'=>['AdminUserController@update', $user->id],'files'=>'true']) !!}
 
