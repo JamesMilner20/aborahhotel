@@ -15,7 +15,7 @@
 
         </div>
 
-        <div class="col-sm-8">
+        <div class="col-sm-">
 
             {!! Form::model($user,['method'=>'PATCH','action'=>['AdminUserController@update', $user->id],'files'=>'true']) !!}
 

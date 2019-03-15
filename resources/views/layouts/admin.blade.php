@@ -84,8 +84,8 @@
                                     Bookings
                                 </a>
                                 <div class="text-center dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">View Bookings</a>
-                                    <a class="dropdown-item" href="#">Add a Booking</a>
+                                    <a class="dropdown-item" href="{{route('bookings.index')}}">View Bookings</a>
+                                    <a class="dropdown-item" href="{{route('bookings.create')}}">Add a Booking</a>
                                 </div>
                             </div>
                         </li>

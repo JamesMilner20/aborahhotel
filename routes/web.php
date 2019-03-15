@@ -18,32 +18,32 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/admin', function (){
-
-    return view('admin.index');
-
-});
-
-
-Route::resource('admin/users','AdminUserController');
-
-//Route::group(['middleware'=>'admin'], function(){
 //
-//    Route::get('/admin', function (){
+//Route::get('/admin', function (){
 //
-//        return view('admin.index');
+//    return view('admin.index');
 //
-//    });
-//
-//    Route::resource('admin/users', 'AdminUsersController');
-//
-//    Route::resource('admin/posts', 'AdminPostsController');
+//});
+
+
+//Route::resource('admin/users','AdminUserController');
+
+Route::group(['middleware'=>'admin'], function(){
+
+    Route::get('/admin', function (){
+
+        return view('admin.index');
+
+    });
+
+    Route::resource('admin/users', 'AdminUserController');
+
+    Route::resource('admin/bookings', 'AdminBookingsController');
 //
 //    Route::resource('admin/categories', 'AdminCategoriesController');
 //
 //    Route::resource('admin/media', 'AdminMediaController');
 //
 //    Route::get('admin/media/upload',['as'=>'admin.media.upload','uses'=>'AdminMediaController@store']);
-//
-//});
+
+});

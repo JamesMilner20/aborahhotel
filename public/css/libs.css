@@ -14843,3 +14843,8 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .toppad
 {margin-top:20px;
 }
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    color: #ffb50799;
+}
+
