@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\bookings;
 use App\price;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class AdminBookingsController extends Controller
 {
@@ -47,6 +48,8 @@ class AdminBookingsController extends Controller
     public function store(Request $request)
     {
         //
+
+
     }
 
     /**
@@ -58,6 +61,10 @@ class AdminBookingsController extends Controller
     public function show($id)
     {
         //
+
+        $booking = bookings::findOrFail($id);
+
+        return view('admin.bookings.view',compact('booking'));
     }
 
     /**
@@ -92,5 +99,12 @@ class AdminBookingsController extends Controller
     public function destroy($id)
     {
         //
+
+        bookings::findOrFail($id)->delete();
+
+        Session::flash('deleted_booking','The Booking has been Deleted');
+
+        return redirect('/admin/bookings');
+
     }
 }

@@ -8,17 +8,20 @@
 
     <h1>Bookings</h1>
 
+    @if(Session::has('deleted_user'))
+
+        <p>{{session('deleted_user')}}</p>
+
+    @endif
+
+
     @if($bookings)
-
-
-
-
 
           @foreach($bookings as $booking)
 
-              <div class="list-group">
+              <div class="list-group text-center">
 
-                  <p><a href="#" class="list-group-item list-group-item-action">You have booked {{$booking->price->description}}, {{$booking->created_at->diffForHumans()}} for {{$booking->date_of_arrival}}</a></p>
+                  <p><a href="{{route('bookings.show',$booking->id)}}" class="list-group-item list-group-item-action">You have booked {{$booking->price->description}}, {{$booking->created_at->diffForHumans()}} for {{$booking->date_of_arrival}}. It costs GH¢ {{$booking->price->price}}.00</a></p>
 
 
 
