@@ -21,26 +21,17 @@
 
               <div class="list-group text-center">
 
-                  <p><a href="{{route('bookings.show',$booking->id)}}" class="list-group-item list-group-item-action">You have booked {{$booking->price->description}}, {{$booking->created_at->diffForHumans()}} for {{$booking->date_of_arrival}}. It costs GH¢ {{$booking->price->price}}.00</a></p>
-
-
-
-
+                  <p><a href="{{route('bookings.show',$booking->id)}}" class="list-group-item list-group-item-action">You have booked a {{$booking->price->description}}, {{$booking->created_at->diffForHumans()}} for {{$booking->date_of_arrival}}. It costs GH¢ {{$booking->price->price}}.00</a></p>
 
               </div>
 
-
           @endforeach
 
+    @else
 
         <p>{{'No bookings made'}}</p>
 
-
-      @endif
-
-
-
-
+    @endif
 
 
 
